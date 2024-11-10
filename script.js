@@ -3,6 +3,7 @@ let previousValue = '';
 let currentValue = '';
 
 let clear = document.querySelector("#clear");
+let back = document.querySelector("#back");
 let equal = document.querySelector("#equal");
 let decimal = document.querySelector("#decimal");
 
@@ -57,6 +58,11 @@ function changeCalculation() {
 
     decimal.addEventListener("click", () => {
         addDecimal();
+    });
+
+    back.addEventListener("click", () => {
+        let value = currentScreen.textContent = currentValue.slice(0, -1);
+        currentValue = value;
     });
 }
 

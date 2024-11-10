@@ -2,17 +2,22 @@ let operator = '';
 let previousValue = '';
 let currentValue = '';
 
+let clear = document.querySelector("#clear");
+let equal = document.querySelector("#equal");
+let decimal = document.querySelector("#decimal");
+
+let numbers = document.querySelectorAll("#number");
+let operators = document.querySelectorAll("#operator");
+
+let previousScreen = document.querySelector("#previous");
+let currentScreen = document.querySelector("#current");
+
 document.addEventListener("DOMContentLoaded", () => {
-    let clear = document.querySelector("#clear");
-    let equal = document.querySelector("#equal");
-    let decimal = document.querySelector("#decimal");
+    displayOperation();
+    changeCalculation();
+});
 
-    let numbers = document.querySelectorAll("#number");
-    let operators = document.querySelectorAll("#operator");
-
-    let previousScreen = document.querySelector("#previous");
-    let currentScreen = document.querySelector("#current");
-    
+function displayOperation() {
     numbers.forEach((number) => {
         number.addEventListener("click", (event) => {
             handleNumber(event.target.textContent);
@@ -27,7 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
             currentScreen.textContent = currentValue;
         })
     });
+}
 
+function changeCalculation() {
     clear.addEventListener("click", () => {
         previousValue = '';
         currentValue = '';
@@ -46,8 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 currentScreen.textContent = previousValue.slice(0, 5) + "...";
             }
         }
-    })
-});
+    });
+
+    decimal.addEventListener("click", () => {
+        addDecimal();
+    });
+}
 
 function handleNumber(num) {
     if (currentValue.length <= 5) {
@@ -82,4 +93,10 @@ function calculate() {
 
 function roundNumber(num) {
     return Math.round(num * 1000) / 1000;
+}
+
+function addDecimal() {
+    if (!currentValue.includes(".")) {
+        currentValue += ".";
+    }
 }

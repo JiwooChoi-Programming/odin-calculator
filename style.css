@@ -1,0 +1,86 @@
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+#first-row {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#screen {
+    align-items: flex-end;
+    border: 1px solid salmon;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 75px;
+    margin: 15px;
+    width: 300px;
+}
+
+#previous {
+    font-size: 20px;
+}
+
+#current {
+    font-size: 30px;
+}
+
+div .btn {
+    font-size: 34px;
+    height: 75px;
+    margin: 15px;
+    width: 75px;
+}
+
+#number {
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+}
+
+#number:hover {
+    background-color: palegreen;
+}
+
+#operator {
+    border: 1px solid steelblue;
+    border-radius: 10px;
+}
+
+#operator:hover {
+    background-color: paleturquoise;
+}
+
+#decimal {
+    border: 1px solid gold;
+    border-radius: 10px;
+}
+
+#decimal:hover {
+    background-color: palegoldenrod;
+}
+
+#equal {
+    border: 1px solid pink;
+    border-radius: 10px;
+}
+
+#equal:hover {
+    background-color: plum;
+}
+
+#clear {
+    border: 1px solid violet;
+    border-radius: 10px;
+}
+
+#clear:hover {
+    background-color: palevioletred;
+}

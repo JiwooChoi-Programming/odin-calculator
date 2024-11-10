@@ -51,7 +51,7 @@ function changeCalculation() {
             if (previousValue <= 5) {
                 currentScreen.textContent = previousValue;
             } else {
-                currentScreen.textContent = previousValue.slice(0, 5) + "...";
+                currentScreen.textContent = previousValue.slice(0, 5);
             }
         }
     });

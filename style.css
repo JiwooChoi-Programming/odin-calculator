@@ -25,6 +25,25 @@ body {
     width: 300px;
 }
 
+#clear {
+    border: 1px solid violet;
+    border-radius: 10px;
+}
+
+#clear:hover {
+    background-color: palevioletred;
+}
+
+#back {
+    border: 1px solid rosybrown;
+    border-radius: 10px;
+    width: 100px;
+}
+
+#back:hover {
+    background-color: magenta;
+}
+
 #previous {
     font-size: 20px;
 }
@@ -74,13 +93,4 @@ body {
 
 #equal:hover {
     background-color: plum;
-}
-
-#clear {
-    border: 1px solid violet;
-    border-radius: 10px;
-}
-
-#clear:hover {
-    background-color: palevioletred;
 }

@@ -27,6 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
             currentScreen.textContent = currentValue;
         })
     });
+
+    clear.addEventListener("click", () => {
+        previousValue = '';
+        currentValue = '';
+        operator = '';
+        previousScreen.textContent = currentValue;
+        currentScreen.textContent = currentValue;
+    });
 });
 
 function handleNumber(num) {

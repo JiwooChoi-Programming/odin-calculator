@@ -37,7 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     equal.addEventListener("click", () => {
-        calculate();
+        if (currentValue !== "" && previousValue !== "") {
+            calculate();
+            previousScreen.textContent = '';
+            if (previousValue <= 5) {
+                currentScreen.textContent = previousValue;
+            } else {
+                currentScreen.textContent = previousValue.slice(0, 5) + "...";
+            }
+        }
     })
 });
 
@@ -69,7 +77,7 @@ function calculate() {
 
     previousValue = roundNumber(previousValue);
     previousValue = previousValue.toString();
-    currentValue = currentValue.toString();
+    currentValue = previousValue.toString();
 }
 
 function roundNumber(num) {
